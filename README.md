@@ -4,12 +4,15 @@ SDBurgers
 Getting Started
 ---------------
 
-    rake setup
+Use the following to bootstrap the app, including installing all the gems and preparing the DB:
 
+    padrino rake setup
 
-Developing
-----------
+To run the development server locally (defaults to port 5000), use:
 
     bundle exec foreman start
 
-You should now have a server running on port 5000, you're good to go!
+To deploy, just push to Heroku with the following:
+
+    git push heroku master
+
