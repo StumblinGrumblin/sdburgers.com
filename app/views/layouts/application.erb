@@ -4,48 +4,42 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
+  <meta charset="utf-8">
+  <title>SDBurgers</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-	<!-- Basic Page Needs
+  <!-- Mobile Specific Metas
   ================================================== -->
-	<meta charset="utf-8">
-	<title>SDBurgers</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- Mobile Specific Metas
+  <!-- CSS
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/skeleton.css">
+  <link rel="stylesheet" href="/stylesheets/layout.css">
+  <link rel="stylesheet" href="/stylesheets/master.css">
 
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="/stylesheets/base.css">
-	<link rel="stylesheet" href="/stylesheets/skeleton.css">
-	<link rel="stylesheet" href="/stylesheets/layout.css">
-	<link rel="stylesheet" href="/stylesheets/master.css">
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif] -->
-
-	<!-- Favicons
-	==================================================
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-	// --->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif] -->
 
 </head>
 <body>
 
-	<!-- Primary Page Layout
-	================================================== -->
-<div class="container">
-	<div class="sixteen columns">
-		<%= yield %>
-	</div>
-</div>
-<!-- End Document
-================================================== -->
+  <div class="container">
+    <header class="sixteen columns">
+      <h1><%= link_to "SDBurgers", url_for(:index) %></h1>
+    </header>
+
+    <div class="sixteen columns" id="main">
+      <%= yield %>
+    </div>
+
+    <footer>
+      &nbsp;
+    </footer>
+  </div>
+
 </body>
 </html>

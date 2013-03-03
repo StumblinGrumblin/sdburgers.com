@@ -1,0 +1,25 @@
+<article>
+  <h2><%= @burger.name %></h2>
+
+  <dl>
+    <dt>Rating</dt>
+    <dd><%= @burger.rating.to_s('F') %></dd>
+
+    <dt>Price</dt>
+    <dd>$<%= @burger.price.to_s('F') %></dd>
+  </dl>
+
+  <p class="address">
+    <span class='establishment-name'><%= @establishment.name %></span>
+    <span class='establishment-street'><%= @establishment.address %></span>
+    <span class='establishment-city'><%= @establishment.city %></span>, <span class='establishment-state'><%= @establishment.state %></span> <span class='establishment-zip'><%= @establishment.zip %></span>
+  </p>
+
+  <p><%= @burger.content %></p>
+
+  <ul>
+    <% @reviews.each do |review| -%>
+      <li><%= review.author.full_name %> &mdash; <%= review.rating.to_s('F') %></li>
+    <% end %>
+  </ul>
+</article>

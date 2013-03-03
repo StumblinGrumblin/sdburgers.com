@@ -56,8 +56,4 @@ class SDBurgers < Padrino::Application
   #     render 'errors/505'
   #   end
   #
-  
-  get "/" do
-    render "index"
-  end
 end

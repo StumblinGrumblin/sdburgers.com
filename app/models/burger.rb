@@ -7,7 +7,7 @@ class Burger
 
   property :id, Serial
   property :name, String
-  property :price, Decimal
-  property :rating, Decimal
+  property :price, Decimal, scale: 2
+  property :rating, Decimal, scale: 1
   property :content, Text
 end
