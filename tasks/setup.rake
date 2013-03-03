@@ -10,5 +10,11 @@ task :setup do
   system("createdb sdburgers_development")
   system("createdb sdburgers_test")
 
+  puts "\n= Migrating database"
+  system("bundle exec padrino rake dm:auto:migrate")
+
+  puts "\n= Seeding development database"
+  system("bundle exec padrino rake seed")
+
   puts "\nYou're ready to develop!"
 end
